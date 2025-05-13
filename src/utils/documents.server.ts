@@ -271,11 +271,11 @@ export async function fetchRepoFile(
         let text: string | null
         // Read file contents
         try {
-          if (process.env.NODE_ENV === 'development') {
+          // if (process.env.NODE_ENV === 'development') {
             text = await fetchFs(repo, filepath)
-          } else {
-            text = await fetchRemote(owner, repo, ref, filepath)
-          }
+          // } else {
+          //   text = await fetchRemote(owner, repo, ref, filepath)
+          // }
         } catch (err) {
           console.error(err)
           return null
